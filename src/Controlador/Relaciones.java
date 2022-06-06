@@ -38,6 +38,11 @@ public class Relaciones {
 		
 		//a cada clase se le asigna la instancia unica del cordinador
 		myMainWindow.setMyCordinador(miCordinador);
+		myStationGui.setMyCordinador(miCordinador);
+		myTracksGui.setMyCordinador(miCordinador);
+		myMusicProgrammingDao.setMyCordinador(miCordinador);
+		myMusicTracksDao.setMyCordinador(miCordinador);
+		myStationDao.setMyCordinador(miCordinador);
 		
 		myMainWindow.setVisible(true);
 		

@@ -9,13 +9,13 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 import Controlador.Cordinador;
+import javax.swing.JButton;
 
 public class MainWindow extends JFrame implements ActionListener{
 	
 	private JMenuItem itemRegistrarPersonas;
 	private JMenuItem itemConsultarPersonas;
 	private JMenuItem itemActualizarPersonas;
-	private JMenuItem itemEliminarPersonas;
 	private Cordinador myCordinador;
 
 	public MainWindow() {
@@ -25,6 +25,11 @@ public class MainWindow extends JFrame implements ActionListener{
 		setResizable(false);
 		setTitle("Emisora");
 		setLocationRelativeTo(null);
+		getContentPane().setLayout(null);
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(213, 352, 162, 21);
+		getContentPane().add(btnNewButton);
 	}
 	
 	public void conponents() {
@@ -34,21 +39,18 @@ public class MainWindow extends JFrame implements ActionListener{
 		JMenu menuPersonas = new JMenu("Gestionar Personas");
 		menuBar.add(menuPersonas);
 		
-		itemRegistrarPersonas = new JMenuItem("Registrar");
+		itemRegistrarPersonas = new JMenuItem("Setings Station");
 		itemRegistrarPersonas.addActionListener(this);
 		menuPersonas.add(itemRegistrarPersonas);
 		
-		itemConsultarPersonas = new JMenuItem("Consultar");
+		itemConsultarPersonas = new JMenuItem("Add Tracks");
 		itemConsultarPersonas.addActionListener(this);
 		menuPersonas.add(itemConsultarPersonas);
 		
-		itemActualizarPersonas = new JMenuItem("Actualizar");
+		itemActualizarPersonas = new JMenuItem("Programing music");
 		itemActualizarPersonas.addActionListener(this);
 		menuPersonas.add(itemActualizarPersonas);
 		
-		itemEliminarPersonas = new JMenuItem("Eliminar");
-		itemEliminarPersonas.addActionListener(this);
-		menuPersonas.add(itemEliminarPersonas);
 		
 	}
 
